@@ -11,7 +11,9 @@
 ## Installing WeaveScope
 
 ```
-kubectl apply -f "https://cloud.weave.works/k8s/scope.yaml?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+# kubectl apply -f "https://cloud.weave.works/k8s/scope.yaml?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+2023-08-22 I can not get access to the site, so I find the script in the github repository of WeaveScope and apply it.
+kubectl apply -f https://github.com/weaveworks/scope/releases/download/v1.13.2/k8s-scope.yaml
 ```
 
 This downloads a recent Scope image from Dockerhub and launches a probe onto every node as well as a single Scope app. 
